@@ -1,0 +1,147 @@
+/* Import Poppins font from the original website */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://web-assets.same.dev/3171610960/2746225117.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('https://web-assets.same.dev/3055690709/2653220534.woff2') format('woff2');
+}
+
+/* Custom variables */
+:root {
+    --primary-color: #214ca8;
+    --text-color: #214ca8;
+    --background-color: #fffdf5;
+    --border-color: #e0e0e0;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    opacity: 0.15;
+}
+
+/* Site title styling */
+.site-title {
+    font-weight: 600;
+    font-size: medium;
+}
+
+.site-title a {
+    color: var(--primary-color);
+}
+
+/* Main heading styling */
+.main-heading {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Shark list styling */
+.shark-list h4 {
+    margin-bottom: 0;
+}
+
+/* Section title styling */
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Image captions */
+.figure-caption {
+    text-align: left;
+}
+
+/* Content styling for individual shark pages */
+.content-area {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* List styling */
+.fact-list {
+    padding-left: 1.2rem;
+}
+
+.fact-list li {
+    margin-bottom: 0.75rem;
+}
+
+.sources-list {
+    padding-left: 1.2rem;
+}
+
+.sources-list li {
+    margin-bottom: 1rem;
+}
+
+/* Shark details page styles */
+.shark-image {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Skip link */
+.skip-link:focus {
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2rem;
+    }
+
+    .d-flex.justify-content-between {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .d-flex.justify-content-between p {
+        text-align: left !important;
+        margin-top: 0.5rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}
