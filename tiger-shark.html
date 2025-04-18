@@ -13,6 +13,12 @@
 
     <!-- Favicon -->
     <link rel="icon" href="favicon-jawdropper.ico" type="images/favicon/favicon-jawdropper">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    #map { height: 40vh; width: 100%; }
+  </style>
 </head>
 <body>
     <!-- Skip to content link for accessibility -->
@@ -75,10 +81,15 @@
                     </p>
 
                     <!-- Map placeholder -->
-                    <div class="mb-4 text-center">
-                        <img src="https://web-assets.same.dev/2401165671/4232083907.png" alt="Map showing tiger shark distribution" class="img-fluid border">
-                        <p class="small text-muted mt-2">Map data: OpenStreetMap contributors</p>
-                    </div>
+                    <div id="map"></div>
+                    <script>
+                      const map = L.map('map').setView([-20, -130], 4); // South Pacific coordinates
+                  
+                      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 18,
+                        attribution: '© OpenStreetMap contributors'
+                      }).addTo(map);
+                    </script>
 
                     <!-- Encounters of the Deep Section -->
                     <h5 class="section-title">Encounters of the Deep</h5>
